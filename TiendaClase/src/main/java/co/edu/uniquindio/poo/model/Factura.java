@@ -9,6 +9,7 @@ public record Factura(String codigo, LocalDate fecha, double total,
 
 
     // cacular el valor de la factura (sumar todos los detalles factura)
+
     public double calcularTotal() {
         double total = 0;
         for (DetalleFactura detalle : listaDetallesFactura) {
@@ -22,9 +23,21 @@ public record Factura(String codigo, LocalDate fecha, double total,
         boolean resultado = false;
         resultado = cliente.verificarNombreConR();
         return resultado ;
-
-
     }
 
+    public boolean comproCelularIphone() {
+        for (DetalleFactura detalle : listaDetallesFactura) {
+            if (detalle.verificarCompraCelular()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean clienteSeLlamaJuan () {
+        boolean resultado = false;
+        resultado = cliente.verificarNombreJuan();
+        return resultado ;
+    }
 }
 

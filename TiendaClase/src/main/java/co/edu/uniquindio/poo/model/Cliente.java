@@ -59,6 +59,8 @@ public class Cliente {
         return nombreCompleto.startsWith("R");
     }
 
+    public boolean verificarNombreJuan () { return nombreCompleto.trim().split(" ")[0].equalsIgnoreCase("Juan"); }
+
     }
 
 

@@ -36,4 +36,6 @@ public class DetalleFactura {
     public float calcularSubTotal(){
         return (float) (cantidadComprada * getProducto().getValor());
     }
+
+    public boolean verificarCompraCelular () { return producto.getNombre().equalsIgnoreCase("Iphone 16 pro max"); }
 }
